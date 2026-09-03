@@ -1,0 +1,17 @@
+# --- Computer vision ---
+opencv-python            # read video frames, draw boxes
+
+# --- Detection + tracking (Stage 1, the cheap loop) ---
+ultralytics              # YOLO detection + ByteTrack tracking (pulls in torch)
+torch                    # deep learning engine (also used for our learned gate)
+torchvision
+
+# --- Data & evaluation ---
+numpy
+pandas
+matplotlib               # the Pareto plots later
+
+# --- Backend + structured output (later phases) ---
+fastapi
+uvicorn[standard]
+pydantic                 # the validated incident-report schema

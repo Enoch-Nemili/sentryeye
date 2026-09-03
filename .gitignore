@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Data & model artifacts (big; not committed)
+data/*
+!data/.gitkeep
+*.mp4
+*.avi
+*.mov
+*.pt
+runs/
+
+# macOS / editors
+.DS_Store
+.vscode/
+.idea/
