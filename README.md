@@ -142,6 +142,15 @@ python -m app.eval_system /path/to/TAD/test
 
 Extends the author's research on adaptive, resource-aware video pipelines (the **STREETS** NSF project and **SkipComp** frame-skipping work at GWU) toward learned, budget-aware escalation — spending expensive computation only when it changes the outcome.
 
+## 📬 Contact
+
+**Nemili Enoch Das** — MS Computer Science @ George Washington University (Dec 2027).
+Open to Summer 2027 SWE / ML-systems internships.
+
+- 📧 [enoch.das@gmail.com](mailto:enoch.das@gmail.com)
+- 💻 GitHub: [@Enoch-Nemili](https://github.com/Enoch-Nemili)
+- 💼 LinkedIn: _add your profile URL here_
+
 ## 📄 License
 
 MIT — see [LICENSE](LICENSE).
