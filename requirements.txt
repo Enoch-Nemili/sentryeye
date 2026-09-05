@@ -15,3 +15,10 @@ matplotlib               # the Pareto plots later
 fastapi
 uvicorn[standard]
 pydantic                 # the validated incident-report schema
+
+# --- Stage 2: vision-LLM (structured incident reports) ---
+google-genai       # Gemini API (multimodal + structured output)
+pillow             # open images to send to the model
+python-dotenv      # load GOOGLE_API_KEY from .env
+scikit-learn
+ollama
