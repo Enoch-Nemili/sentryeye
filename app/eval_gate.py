@@ -14,8 +14,12 @@ Works on both TAD splits (accident* -> 1, normal* -> 0).
   python -m app.eval_gate ".../TAD-benchmark/train" --limit 40 --out data/train_features.csv
 """
 
-import sys, os, glob, csv, argparse
+import argparse
+import csv
+import glob
+import os
 from collections import defaultdict
+
 import cv2
 from ultralytics import YOLO
 
@@ -76,8 +80,7 @@ def features_for_video(model, path):
                 s = speeds[tid]
                 if tid in last_speed:
                     decel = last_speed[tid] - s
-                    if decel > max_abrupt_decel:
-                        max_abrupt_decel = decel
+                    max_abrupt_decel = max(max_abrupt_decel, decel)
                 if s > MOVE_SPEED:
                     has_moved[tid] = True
                 slow_count[tid] = slow_count[tid] + 1 if s < STOP_SPEED else 0
@@ -87,8 +90,7 @@ def features_for_video(model, path):
                     stalled_ids.add(tid)
                     if first_stall_frame < 0:
                         first_stall_frame = frame_idx
-                    if flow_frac > max_flow_at_stall:
-                        max_flow_at_stall = flow_frac
+                    max_flow_at_stall = max(max_flow_at_stall, flow_frac)
                     if flow_frac >= 0.5:
                         isolated_stall_count += 1
                 last_speed[tid] = s

@@ -13,13 +13,15 @@ only retries the failures, converging to a complete result. Numbers are final on
     python -m app.eval_system "/Users/.../TAD-benchmark/test"
 """
 
-import sys
-import os
 import csv
+import os
+import sys
 import time
-import pandas as pd
+
 import cv2
+import pandas as pd
 from PIL import Image
+
 from app.report import analyze_image
 
 CONF_MIN = 0.5
@@ -86,7 +88,7 @@ def main():
                             incident_type, confidence = report.incident_type, report.confidence
                             verdict = f"{incident_type}/{confidence:.2f}"
                             save_to_cache(r.video, incident_type, confidence)
-                    except Exception:
+                    except Exception:  # noqa: BLE001 - API boundary: mark for re-run, keep evaluating
                         verdict = "API-ERROR (re-run)"
                         pending += 1
                     time.sleep(0.4)

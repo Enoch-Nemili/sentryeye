@@ -13,12 +13,13 @@ Run from the project root (venv active):
     python -m app.cascade "/Users/.../TAD-benchmark/test/accident/videox_test_T1.mp4"
 """
 
-import sys
 import os
+import sys
 from collections import defaultdict
+
 import cv2
-from ultralytics import YOLO
 from PIL import Image
+from ultralytics import YOLO
 
 from app.report import analyze_image
 

@@ -9,6 +9,7 @@ Run from the project root (venv active):
 """
 
 import sys
+
 import cv2
 
 
