@@ -1,3 +1,5 @@
+![SentryEye](docs/social-preview.png)
+
 # 🚦 SentryEye — Budget-Aware Traffic-Incident Detection
 
 **Detect traffic accidents from CCTV video in real time, and call an expensive vision-LLM on only ~0.1% of frames.**
