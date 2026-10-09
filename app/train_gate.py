@@ -20,11 +20,11 @@ real system design -> evaluate the FULL cascade (Phase 6), not the gate alone.
 
 import numpy as np
 import pandas as pd
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import roc_auc_score
+from sklearn.model_selection import cross_val_score
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
-from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import cross_val_score
-from sklearn.metrics import roc_auc_score
 
 FEATURES = ["num_stalled", "max_simultaneous_stopped", "max_flow_at_stall", "isolated_stall_count"]
 B_RECALL, B_FA = 0.8125, 0.3125

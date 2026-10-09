@@ -9,13 +9,14 @@ Pick the backend with an env var (in .env or the shell):
     python -m app.report data/sample_frame.jpg
 """
 
-import os
 import io
+import os
 import sys
 import time
-from pydantic import BaseModel, Field
+
 from dotenv import load_dotenv
 from PIL import Image
+from pydantic import BaseModel, Field
 
 load_dotenv()
 
@@ -68,7 +69,7 @@ def _analyze_ollama(image):
         resp = ollama.chat(model=OLLAMA_VLM_MODEL, messages=msgs,
                            format=IncidentReport.model_json_schema(),  # schema-guided JSON
                            options={"temperature": 0})
-    except Exception:
+    except Exception:  # noqa: BLE001 - older Ollama builds reject schema format; fall back to JSON mode
         resp = ollama.chat(model=OLLAMA_VLM_MODEL, messages=msgs,
                            format="json", options={"temperature": 0})   # fallback: plain JSON mode
     text = resp["message"]["content"]

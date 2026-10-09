@@ -10,6 +10,7 @@ Run from the project root (venv active):
 """
 
 import sys
+
 import cv2
 from ultralytics import YOLO
 

@@ -2,6 +2,8 @@
 
 **Detect traffic accidents from CCTV video in real time, and call an expensive vision-LLM on only ~0.1% of frames.**
 
+[![CI](https://github.com/Enoch-Nemili/sentryeye/actions/workflows/ci.yml/badge.svg)](https://github.com/Enoch-Nemili/sentryeye/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/Enoch-Nemili/sentryeye)](https://github.com/Enoch-Nemili/sentryeye/releases)
 ![Python](https://img.shields.io/badge/Python-3.12-blue)
 ![PyTorch](https://img.shields.io/badge/PyTorch-MPS-red)
 ![YOLOv11](https://img.shields.io/badge/YOLO-v11-green)
@@ -122,7 +124,7 @@ python -m app.eval_system /path/to/TAD/test
 
 ## 🧰 Tech stack
 
-**Python** · **PyTorch** (Apple-MPS accelerated) · **Ultralytics YOLOv11** · **ByteTrack** · **OpenCV** · **scikit-learn** · **Google Gemini API** · **Ollama** (local VLM) · **Pydantic** · **pandas / matplotlib** · **Docker** · **Git**
+**Python** · **PyTorch** (Apple-MPS accelerated) · **Ultralytics YOLOv11** · **ByteTrack** · **OpenCV** · **scikit-learn** · **Google Gemini API** · **Ollama** (local VLM) · **Pydantic** · **pandas / matplotlib** · **Git**
 
 ---
 
@@ -145,11 +147,15 @@ Extends the author's research on adaptive, resource-aware video pipelines (the *
 ## 📬 Contact
 
 **Nemili Enoch Das** — MS Computer Science @ George Washington University (Dec 2027).
-Open to Summer 2027 SWE / ML-systems internships.
+Open to full-time and early-career software engineering roles in AI infrastructure, backend and ML systems.
 
 - 📧 [enoch.das@gmail.com](mailto:enoch.das@gmail.com)
 - 💻 GitHub: [@Enoch-Nemili](https://github.com/Enoch-Nemili)
-- 💼 LinkedIn: _add your profile URL here_
+- 💼 LinkedIn: [enoch-nemili](https://www.linkedin.com/in/enoch-nemili/)
+
+## 🤝 Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md), [CHANGELOG.md](CHANGELOG.md) and [SECURITY.md](SECURITY.md).
 
 ## 📄 License
 
